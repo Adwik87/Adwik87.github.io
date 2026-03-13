@@ -1,82 +1,295 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root{
+
+--bg-main:#050505;
+--bg-card:#111;
+
+--accent:#6aa9ff;
+--accent-soft:#3b82f6;
+
+--text-main:#ffffff;
+--text-soft:#a0a0a0;
+
+--border:#222;
+
 }
 
-body {
-    font-family: 'Space Grotesk', sans-serif;
-    background-color: #0f1115; /* Premium dark background */
-    color: #e0e0e0;
-    line-height: 1.6;
-    padding: 40px 20px;
-    max-width: 1000px;
-    margin: 0 auto;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-.hero {
-    text-align: center;
-    margin-bottom: 60px;
-    padding-bottom: 40px;
-    border-bottom: 1px solid #333;
+body{
+
+background: radial-gradient(circle at 20% 20%, #0d0d0d, #050505);
+
+font-family:"Inter", sans-serif;
+
+color:var(--text-main);
+
+min-height:100vh;
+
 }
 
-h1 {
-    font-size: 3.5rem;
-    color: #ffffff;
-    margin-bottom: 10px;
-    letter-spacing: -1px;
+
+/* NAVBAR */
+
+.navbar{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:25px 80px;
+
+border-bottom:1px solid var(--border);
+
 }
 
-.subtitle {
-    font-size: 1.2rem;
-    color: #4da6ff; /* Clean blue accent */
-    font-weight: 600;
-    margin-bottom: 15px;
+.logo a{
+
+font-family:"Space Grotesk", sans-serif;
+font-size:20px;
+font-weight:600;
+
+color:white;
+
+text-decoration:none;
+
 }
 
-.bio {
-    max-width: 600px;
-    margin: 0 auto;
-    color: #a0a0a0;
+.nav-links a{
+
+margin-left:30px;
+
+text-decoration:none;
+
+color:var(--text-soft);
+
+transition:0.25s;
+
 }
 
-h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-    color: #ffffff;
+.nav-links a:hover{
+
+color:var(--accent);
+
 }
 
-/* The Grid Layout */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+
+/* HERO */
+
+.hero{
+
+height:75vh;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+
+padding:0 20px;
+
+animation:fadeUp 1s ease;
+
 }
 
-/* Interactive Cards */
-.card {
-    background-color: #1a1d24;
-    padding: 30px;
-    border-radius: 12px;
-    border: 1px solid #2a2d35;
-    transition: transform 0.3s ease, border-color 0.3s ease;
-    cursor: pointer;
+.hero-title{
+
+font-family:"Space Grotesk", sans-serif;
+
+font-size:64px;
+
+margin-bottom:15px;
+
 }
 
-.card h3 {
-    color: #ffffff;
-    margin-bottom: 10px;
-    font-size: 1.3rem;
+.hero-subtitle{
+
+max-width:550px;
+
+color:var(--text-soft);
+
+font-size:18px;
+
 }
 
-.card p {
-    color: #a0a0a0;
-    font-size: 0.95rem;
+.btn-primary{
+
+margin-top:35px;
+
+padding:14px 28px;
+
+background:linear-gradient(135deg,var(--accent),var(--accent-soft));
+
+color:white;
+
+text-decoration:none;
+
+border-radius:8px;
+
+font-weight:500;
+
+transition:0.25s;
+
 }
 
-/* The Interactivity (Hover Effect) */
-.card:hover {
-    transform: translateY(-5px);
-    border-color: #4da6ff;
+.btn-primary:hover{
+
+transform:translateY(-2px);
+
+box-shadow:0 10px 25px rgba(100,150,255,0.3);
+
+}
+
+
+/* ABOUT */
+
+.about-container{
+
+padding:100px 10%;
+
+}
+
+.about-container h1{
+
+font-family:"Space Grotesk", sans-serif;
+
+font-size:40px;
+
+margin-bottom:25px;
+
+}
+
+.bio{
+
+max-width:700px;
+
+color:var(--text-soft);
+
+margin-bottom:40px;
+
+}
+
+.about-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+
+}
+
+.about-card{
+
+background:var(--bg-card);
+
+padding:25px;
+
+border-radius:14px;
+
+border:1px solid var(--border);
+
+transition:0.3s;
+
+}
+
+.about-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--accent);
+
+}
+
+
+/* PROJECTS */
+
+.projects-container{
+
+padding:100px 10%;
+
+}
+
+.projects-container h1{
+
+font-family:"Space Grotesk", sans-serif;
+
+font-size:40px;
+
+margin-bottom:30px;
+
+}
+
+.projects-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:25px;
+
+}
+
+.project-card{
+
+background:var(--bg-card);
+
+border-radius:16px;
+
+padding:35px;
+
+border:1px solid var(--border);
+
+transition:0.3s;
+
+}
+
+.project-card:hover{
+
+transform:translateY(-8px);
+
+border-color:var(--accent);
+
+}
+
+
+/* FOOTER */
+
+.footer{
+
+margin-top:80px;
+
+padding:30px;
+
+text-align:center;
+
+border-top:1px solid var(--border);
+
+color:var(--text-soft);
+
+}
+
+
+/* ANIMATION */
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
 }
