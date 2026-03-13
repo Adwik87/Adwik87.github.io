@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: #0f1115; /* Premium dark background */
+    color: #e0e0e0;
+    line-height: 1.6;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 60px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #333;
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #4da6ff; /* Clean blue accent */
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.bio {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #a0a0a0;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+/* The Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Interactive Cards */
+.card {
+    background-color: #1a1d24;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #2a2d35;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+}
+
+.card h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.card p {
+    color: #a0a0a0;
+    font-size: 0.95rem;
+}
+
+/* The Interactivity (Hover Effect) */
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #4da6ff;
+}
